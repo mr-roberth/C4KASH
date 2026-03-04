@@ -300,7 +300,7 @@
             <div class="login-card">
                 <h1>red<span>ambiental</span></h1>
                 <div class="subhead">
-                    Acceso · RAM
+                    Acceso a usuarios · RAM
                 </div>
 
                 <div id="errorBox" class="error-message">
@@ -309,7 +309,7 @@
 
                 <div class="input-group">
                     <label for="username">Usuario maestro</label>
-                    <input type="text" id="username" placeholder="ej. RAM25" value="RAM25">
+                    <input type="text" id="username" placeholder="" value="RAM25">
                 </div>
 
                 <div class="input-group">
@@ -318,10 +318,6 @@
                 </div>
 
                 <button class="btn-login" id="loginBtn">Ingresar al panel</button>
-
-                <div style="margin-top: 2rem; font-size: 0.8rem; color: #A0B8CC; text-align: center; border-top: 1px dashed #C0D4E8; padding-top: 1.5rem;">
-                    <span style="background:#E8F0FE; padding:0.2rem 1rem; border-radius:40px">Demo: usuario <strong>RAM25</strong> · contraseña <strong>ram%2026</strong></span>
-                </div>
             </div>
         </div>
 
@@ -373,7 +369,7 @@
             // ----- FUNCIÓN PARA INICIAR SESIÓN -----
             function attemptLogin() {
                 const user = usernameInput.value.trim();
-                const pass = passwordInput.value;  // respetar tal cual (incluye % si el usuario lo escribe)
+                const pass = passwordInput.value;  // respetar %
 
                 // Verificar credenciales (comparación estricta)
                 if (user === MASTER_USER && pass === MASTER_PASS) {
